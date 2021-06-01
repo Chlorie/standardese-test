@@ -1,0 +1,12 @@
+theme: jekyll-rtd-theme
+
+plugins:
+  - github-pages
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
+  - jekyll-readme-index
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

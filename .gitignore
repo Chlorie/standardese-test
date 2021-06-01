@@ -6,3 +6,7 @@ build/
 /Folder.DotSettings.user
 docs/output/
 vcpkg_installed/
+
+_site/
+.sass-cache
+/Gemfile.lock

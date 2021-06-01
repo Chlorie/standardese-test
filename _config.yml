@@ -1,6 +1,18 @@
 remote_theme: rundocs/jekyll-rtd-theme
 
+title: standardese-test
+description: Testing standardese docgen
+copyright: Chlorie
+url: "https://chlorie.github.io/standardese-test/"
+
 plugins:
+  - github-pages
   - jemoji
+  - jekyll-remote-theme
   - jekyll-avatar
   - jekyll-mentions
+  - jekyll-readme-index
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
