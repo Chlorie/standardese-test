@@ -18,12 +18,16 @@ jobs:
         with:
           ref: gh-pages
           path: docs
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: standardese
+          python-version: 3.8
+          channels: conda-forge
+          allow-softlinks: true
+          channel-priority: flexible
+          show-channel-urls: true
+          use-only-tar-bz2: true
       - name: Test push
         run: |
-            cd main
-            date > date.txt
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git add -A
-            git commit -m "updated date"
-            git push
+            conda install standardese
+            standardese -V
