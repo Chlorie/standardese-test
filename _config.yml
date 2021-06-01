@@ -1,0 +1,6 @@
+remote_theme: rundocs/jekyll-rtd-theme
+
+plugins:
+  - jemoji
+  - jekyll-avatar
+  - jekyll-mentions
