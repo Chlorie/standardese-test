@@ -20,7 +20,8 @@ jobs:
           path: docs
       - name: Test push
         run: |
-            date > main/date.txt
+            cd main
+            date > date.txt
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add -A
