@@ -2,13 +2,16 @@ name: Build docs
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -26,5 +29,5 @@ jobs:
           show-channel-urls: true
       - name: Install standardese
         run: |
-            conda install standardese
-            standardese -V
+          conda install standardese
+          standardese -V
