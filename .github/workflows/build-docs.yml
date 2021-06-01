@@ -27,7 +27,10 @@ jobs:
           channel-priority: flexible
           show-channel-urls: true
           use-only-tar-bz2: true
-      - name: Test push
+      - name: Install standardese
         run: |
+            conda activate standardese
             conda install standardese
+      - name: Test run
+        run: |
             standardese -V
