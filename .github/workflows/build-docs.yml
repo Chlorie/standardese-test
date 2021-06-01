@@ -29,7 +29,6 @@ jobs:
           use-only-tar-bz2: true
       - name: Install standardese
         run: |
-            conda activate standardese
             conda install standardese
       - name: Test run
         run: |
