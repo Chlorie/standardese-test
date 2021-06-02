@@ -42,4 +42,4 @@ jobs:
           git config user.email "action@github.com"
           git add -A
           git commit -m "Update docs"
-          git push -f
+          git push -f origin HEAD:gh-pages
