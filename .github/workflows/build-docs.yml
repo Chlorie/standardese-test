@@ -19,7 +19,7 @@ jobs:
           path: main
       - uses: actions/checkout@v2
         with:
-          ref: gh-pages
+          ref: 96316ba6baaede1de9a5e188ab001ec6f88b8434
           path: docs
       - uses: conda-incubator/setup-miniconda@v2
         with:
@@ -31,3 +31,15 @@ jobs:
         run: |
           conda install standardese
           standardese -V
+      - name: Build docs
+        run: |
+          python main/docs/build.py docs
+      - name: Push docs
+        run: |
+          cd docs
+          git config --global push.default simple
+          git config user.name "Github Actions"
+          git config user.email "action@github.com"
+          git add -A
+          git commit -m "Update docs"
+          git push -f
